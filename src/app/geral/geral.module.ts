@@ -18,7 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     IonicModule,
     FormsModule,
     RouterModule,
-    HttpClientModule // @angular/common/http
+    HttpClientModule
   ],
 
   exports: [

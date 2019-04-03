@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import { EleicaoService } from '../eleicao.service';
+import { SiteService } from '../site.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -9,25 +9,24 @@ import { EleicaoService } from '../eleicao.service';
 })
 export class CadastroComponent implements OnInit {
 
-  candidato: any = {};
-  eleicao: EleicaoService;
+  usuario: any = {};
+  site: SiteService;
 
-  constructor(private local: Location, _eleicao: EleicaoService) {
-    this.eleicao = _eleicao;
+  constructor(private local: Location, _site: SiteService) {
+    this.site = _site;
   }
 
   ngOnInit() {}
 
   cadastrar(meuForm) {
     let _nome = meuForm.value.nome;
-    let _setor = meuForm.value.setor;
+    let _email = meuForm.value.email;
     
-    if (_nome && _setor) {
+    if (_nome && _email) {
       
-      this.eleicao.addCandidato({
+      this.site.addUsuario({
         nome: _nome, 
-        setor: _setor, 
-        imagem: 'https://picsum.photos/150/150?random'}
+        email: _email}
       );
       this.local.back();
 
@@ -36,9 +35,6 @@ export class CadastroComponent implements OnInit {
     }
   }
 
-  capturarFoto() {
-
-  }
 
   voltar() {
     this.local.back();

@@ -1,0 +1,12 @@
+<app-layout>
+
+
+    <div class="lista" *ngIf="usuarios.length > 0">
+         
+
+        <app-card *ngFor="let usuario of usuarios" 
+            [nome]="usuario.nome" [email]="usuario.email"></app-card>
+
+    </div>
+
+</app-layout>

@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CandidatosComponent } from './candidatos/candidatos.component';
+import { UsuarioComponent } from './usuario/usuario.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 
 const routes: Routes = [
-  { path: '', component: CandidatosComponent },
+  { path: '', component: UsuarioComponent },
   // { path: 'voto', component: null },
   { path: 'cadastro', component: CadastroComponent },
 ];
@@ -13,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class EleicaoRoutingModule { }
+export class SiteRoutingModule { }

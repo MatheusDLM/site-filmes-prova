@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 
-import { EleicaoRoutingModule } from './eleicao-routing.module';
-import { CandidatosComponent } from './candidatos/candidatos.component';
+import { SiteRoutingModule } from './site-routing.module';
+import { UsuarioComponent } from './usuario/usuario.component';
 import { GeralModule } from '../geral/geral.module';
 import { CadastroComponent } from './cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
-    CandidatosComponent,
+    UsuarioComponent,
     CadastroComponent
   ],
   imports: [
     GeralModule,
-    EleicaoRoutingModule
+    SiteRoutingModule
   ]
 })
-export class EleicaoModule { }
+export class SiteModule { }
