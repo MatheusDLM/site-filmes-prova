@@ -40,15 +40,31 @@ export class SiteService {
     localStorage.setItem('usuarios_usuarios', JSON.stringify(this._usuarios));
   }
 
+  editarUsuario(id, nome, email){
+    this._usuarios[id].nome = nome;
+    this._usuarios[id].email = email;
+    this.saveLocal();
+  }
+
+  excluirContato(id){
+    this._usuarios[id].nome = null;
+    this._usuarios[id].email = null;
+    this._usuarios[id].imagem = null;
+    this.saveLocal();
+  }
+
 
 }
 
 export class Usuario {
+  id: number;
   nome: string;
   email: string;
+  imagem: string
 
-  constructor(_nome: string, _email: string) {
+  constructor(_nome: string, _email: string, _imagem: string) {
     this.nome = _nome;
     this.email = _email;
+    this.imagem = _imagem;
   }
 }

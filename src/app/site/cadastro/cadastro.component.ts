@@ -21,13 +21,16 @@ export class CadastroComponent implements OnInit {
   cadastrar(meuForm) {
     let _nome = meuForm.value.nome;
     let _email = meuForm.value.email;
+    let idF = (meuForm.value.id);
     
     if (_nome && _email) {
       
       this.site.addUsuario({
+        id: idF,
         nome: _nome, 
-        email: _email}
-      );
+        email: _email,
+        imagem: 'https://api.adorable.io/avatars/100/' + idF + '.png',
+      });
       this.local.back();
 
     } else {
