@@ -1,11 +1,92 @@
 <app-layout>
 
+    <h1>Cadastre-se para ver o conteúdo</h1>
 
     <div class="lista" *ngIf="usuarios.length > 0">
-         
 
-        <app-card *ngFor="let usuario of usuarios" (click)="navegarEdicao(usuario)"
-            [nome]="usuario.nome" [email]="usuario.email"></app-card>
+
+        <app-card *ngFor="let usuario of usuarios" (click)="navegarEdicao(usuario)" [nome]="usuario.nome"
+            [email]="usuario.email"></app-card>
+        <div class="site flex-center-center width100">
+            <h1>Usuarios Cadastrados! (Em breve aba para comentários)</h1>
+            <div class="corpodestaque width100">
+                <h1>Filmes em Destaque</h1>
+                <div class="imgdestaque width100">
+                    <div class="img1">
+                        <img src="http://br.web.img3.acsta.net/c_215_290/pictures/18/02/01/19/21/1970542.jpg">
+                        <p><strong>A noite do Jogo</strong></p>
+                    </div>
+
+                    <div class="img2">
+                        <img src="http://br.web.img3.acsta.net/c_215_290/pictures/19/02/19/15/31/1517190.jpg">
+                        <p><strong>A cinco passos de você</strong></p>
+                    </div>
+
+                    <div class="img3">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/71pNtXwR-aL._SY355_.jpg">
+                        <p><strong>Deadpool 2</strong></p>
+                    </div>
+
+                    <div class="img4">
+                        <img
+                            src="https://ovicio.com.br/wp-content/uploads/2019/02/20190223-spider-man-into-the-spider-verse-post-4.jpg">
+                        <p><strong>Homem Aranha <br>
+                                no Aranhaverso</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="corpo">
+                <h1>Filmes</h1>
+                <div class="filmes flex-center-center">
+                    <img
+                        src="http://br.web.img1.acsta.net/cx_120_160/b_1_d6d6d6/medias/nmedia/18/90/93/20/20120876.jpg">
+                    <p>1: O Poderoso Chefão
+                        <br>
+
+                        Data de lançamento 24 de março de 1972 (2h 55min) <br>
+                        Direção: Francis Ford Coppola <br>
+                        Elenco: Marlon Brando, Al Pacino, James Caan <br>
+                        Gêneros Policial, Drama <br>
+                        Nacionalidade EUA</p>
+
+                    <img
+                        src="http://br.web.img3.acsta.net/cx_120_160/b_1_d6d6d6/medias/nmedia/18/90/59/58/20103846.jpg">
+                    <p>2: A Lista de Schindler
+                        <br>
+
+                        Data de lançamento 31 de dezembro de 1993 (3h 15min) <br>
+                        Direção: Steven Spielberg <br>
+                        Elenco: Liam Neeson, Ben Kingsley, Ralph Fiennes <br>
+                        Gêneros Histórico, Guerra <br>
+                        Nacionalidade EUA</p>
+
+                </div>
+                <div class="filmes2 flex-center-center">
+                    <img
+                        src="http://br.web.img3.acsta.net/cx_120_160/b_1_d6d6d6/medias/nmedia/18/87/84/28/19962110.jpg">
+                    <p>3: O Rei Leão
+                        <br>
+
+                        Relançamento 26 de agosto de 2011 (1h 29min) <br>
+                        Direção: Roger Allers, Rob Minkoff <br>
+                        Elenco: Garcia Júnior, Jorgeh Ramos, Mauro Ramos <br>
+                        Gêneros Animação, Aventura <br>
+                        Nacionalidade EUA</p>
+
+                    <img
+                        src="http://br.web.img3.acsta.net/cx_120_160/b_1_d6d6d6/medias/nmedia/18/92/91/47/20224867.jpg">
+                    <p>4: O Senhor dos Anéis - O Retorno do Rei
+                        <br>
+
+                        Data de lançamento 25 de dezembro de 2003 (3h 21min) <br>
+                        Direção: Peter Jackson <br>
+                        Elenco: Sean Astin, Elijah Wood, Viggo Mortensen <br>
+                        Gêneros Fantasia, Aventura <br>
+                        Nacionalidades EUA, Nova Zelândia</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 </app-layout>

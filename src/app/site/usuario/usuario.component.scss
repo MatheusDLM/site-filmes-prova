@@ -7,4 +7,80 @@
     app-card {
         margin: .3em;
     }
+
+    * { box-sizing: border-box; }
+
+body{margin: 0;
+  background-color: black;}
+
+.site {
+  min-height: 100vh;
+  flex-direction: column;
+  color: black;
+}
+
+
+.corpodestaque {
+  max-width: 1000px;
+  margin: auto;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+
+.img1,.img2,.img3,.img4 {
+  text-align: center;
+  margin: 5px 3px;
+  border: solid grey;
+  background-color: grey;
+  border-radius: 5%;
+  box-shadow: 0 3px 3px 
+ rgba(0,0,0,.1);
+  border-radius: 3%;
+  width:40%;
+  border: solid black;
+ }
+
+
+.imgdestaque img {
+  height: 10em;
+  width: 100%;
+  border-radius: 2%;
+}
+
+
+.imgdestaque {
+  display: flex;
+}
+
+.corpo {
+  max-width: 900px;
+  margin: auto;
+  text-transform: capitalize;
+  text-align: center;
+  display: block;
+}
+
+
+
+.flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.filmes,.filmes2 {
+    border: solid black;
+    background-color: grey;
+}
+
+.filmes img, .filmes2 img {
+  margin: 1em;
+  border: solid black; 
+}
+
 }

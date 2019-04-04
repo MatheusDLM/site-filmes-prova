@@ -1,34 +1,23 @@
-<app-header class="principal">
+<app-layout class="cadastro-component">
 
-  <form class="formulario" #cadForm="ngForm" (ngSubmit)="editar(cadForm)">
-    <label for="id">ID:</label>
-    <ion-item>
-      <ion-input type="number" name="id" id="id" placeholder="Digite o ID" [(ngModel)]="contato.id"></ion-input>
-    </ion-item>
-    
-    <label for="nome">Nome:</label>
-    <ion-item>
-      <ion-input type="text" name="nome" id="nome" placeholder="Digite seu nome" [(ngModel)]="contato.nome"></ion-input>
-    </ion-item>
-    
-    <label for="telefone">Telefone:</label>
-    <ion-item>
-      <ion-input type="text" name="telefone" id="telefone" placeholder="Digite seu telefone" [(ngModel)]="contato.telefone"></ion-input>
-    </ion-item>
-    
-    <label for="email">Email:</label>
-    <ion-item>
-      <ion-input type="email" name="email" id="email" placeholder="Digite seu email" [(ngModel)]="contato.email"></ion-input>
-    </ion-item> 
+  <h1>Cadastro</h1>
 
-    <ion-button class="btnfoto" type="button" (click)="caputurarFoto()">Tirar Foto</ion-button>
 
-    <div class="botao">
-      <ion-button color="success" type="submit">Salvar</ion-button>
-      <ion-button class="bt_can" (click)="voltar()" >Cancelar</ion-button>
-      <ion-button class="btn_ex" (click)=excluir(cadForm)>Excluir</ion-button>       
-    </div>
+  <form class="form-cadastro" #cadForm="ngForm" (ngSubmit)="cadastrar(cadForm)">
 
+    <label for="id">Id</label>
+    <input type="number" name="id" id="id" [(ngModel)]="usuario.id">
+
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" id="nome" [(ngModel)]="usuario.nome">
+
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" [(ngModel)]="usuario.email">
+
+    <br>
+    <ion-button color="success" type="submit">Salvar</ion-button>
+    <ion-button (click)="voltar()">cancelar</ion-button>
+    <ion-button class="btn_ex" (click)=excluir(cadForm)>Excluir</ion-button> 
   </form>
 
-</app-header>
+</app-layout>

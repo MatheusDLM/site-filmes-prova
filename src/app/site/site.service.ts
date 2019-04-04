@@ -46,7 +46,7 @@ export class SiteService {
     this.saveLocal();
   }
 
-  excluirContato(id){
+  excluirUsuario(id){
     this._usuarios[id].nome = null;
     this._usuarios[id].email = null;
     this._usuarios[id].imagem = null;
@@ -62,9 +62,10 @@ export class Usuario {
   email: string;
   imagem: string
 
-  constructor(_nome: string, _email: string, _imagem: string) {
-    this.nome = _nome;
-    this.email = _email;
-    this.imagem = _imagem;
+  constructor(id: number,nome: string, email: string, imagem: string) {
+    this.id = id;
+    this.nome = nome;
+    this.email = email;
+    this.imagem = imagem;
   }
 }

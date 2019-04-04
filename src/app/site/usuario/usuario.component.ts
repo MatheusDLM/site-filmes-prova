@@ -24,20 +24,13 @@ export class UsuarioComponent implements OnInit {
 
   navegarEdicao(index){
     this.meuRouter.navigate(['site/editar', index.id]);
-    //console.log(index.id);
   }
 
-  cardClick(valor) {
-    alert('clicou em: '+valor.nome);
-  }
 
   carregaUsuario() {
     this.usuarios = this.cands.getUsuarios();
   }
 
-  private colocaUsuarios(results) {
-    this.usuarios = results;
-  }
 
   navegar() {
     this.meuRouter.navigate(['/site/cadastro']);

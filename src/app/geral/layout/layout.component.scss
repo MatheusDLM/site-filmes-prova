@@ -11,22 +11,18 @@
         align-items: center;
         justify-content: center;
         padding: 0 1em;
-        background-color: deeppink;
-        color: #fff;
+        background-image: url(https://www.torredevigilancia.com/wp-content/uploads/2017/12/fnrdp0uh0y6lrxmbs2zg-810x455.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center center;
+        text-align: center;
+        color: lawngreen;
 
         span {
             flex-grow: 1;
             font-weight: bold;
         }
 
-        button {
-            border-radius: 5px;
-            border: 1px solid #c0c0c0;
-            padding: .4em .6em;
-            text-transform: uppercase;
-            background-color: #fff;
-            color: #333;
-        }
     }
 
     .principal {

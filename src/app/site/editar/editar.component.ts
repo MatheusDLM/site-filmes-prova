@@ -22,22 +22,14 @@ export class EditarComponent implements OnInit {
   ngOnInit() {
 
     this.index = this.rota.snapshot.paramMap.get('id');
-    //console.log(this.index);
-
-    /*this.index = this.rota.queryParams.subscribe( parametros => {
-      if (parametros['id']) {
-        console.log(parametros);
-      }
-    });*/
 
     this.usuario = this.site.getUmUsuario(this.index);
-    //console.log(this.contato);
   }
 
-  editar(formulario){
-    let idF = (formulario.value.id);
-    let nomeF = (formulario.value.nome);
-    let emailF = (formulario.value.email);    
+  editar(meuForm){
+    let idF = (meuForm.value.id);
+    let nomeF = (meuForm.value.nome);
+    let emailF = (meuForm.value.email);    
 
     if(nomeF && emailF != ""){
       this.site.editarUsuario(idF, nomeF, emailF);
@@ -47,8 +39,8 @@ export class EditarComponent implements OnInit {
     }
   }
 
-  excluir(formulario){
-    let idF = (formulario.value.id);
+  excluir(meuForm){
+    let idF = (meuForm.value.id);
     this.excluirConfirma(idF);
   }
 
@@ -75,7 +67,7 @@ export class EditarComponent implements OnInit {
     await alert.present();
   }
 
-  async contatoExcluidoStatus() {
+  async usuarioExcluidoStatus() {
     const alert = await this.alertController.create({
       header: 'Usuario Excluido!',
       buttons: ['OK']
@@ -90,13 +82,13 @@ export class EditarComponent implements OnInit {
 
   async excluirConfirma(id) {
     const alert = await this.alertController.create({
-      header: 'Deseja Excluir o Contato?',
+      header: 'Deseja Excluir o Usuario?',
       buttons: [{
         text:'Sim',
         handler: () => {
-          this.site.excluirContato(id);
+          this.site.excluirUsuario(id);
           this.local.back();
-          this.contatoExcluidoStatus();
+          this.usuarioExcluidoStatus();
         }
       },{
         text:'Não'
